@@ -1,20 +1,19 @@
 package main
 
 import (
-	"demo/data"
+	_7 "demo/17"
 	"fmt"
-	"github.com/kataras/iris"
 )
 
 type Func func(int, int) int
 
 func main() {
-	app := iris.New()
-
-	app.Get("/", func(iris.Context) {
-		fmt.Print("???")
-	})
-	app.Run(iris.Addr(":8080"))
+	//app := iris.New()
+	//
+	//app.Get("/", func(iris.Context) {
+	//	fmt.Print("???")
+	//})
+	//app.Run(iris.Addr(":8080"))
 
 	//var f Func
 	//f = func(i int, i2 int) int {
@@ -86,19 +85,29 @@ func main() {
 	//data.NewSort()
 	//data.MpDemo()
 
-	data.NewHash()
-	data.SetKey("1312", "dfad")
-	data.SetKey("世界和平", "核平")
-	data.SetKey("go", "宝可梦")
-	data.SetKey("hahah", "哈哈哈")
-	data.SetKey("???", 123213)
-	data.SetKey("欸", "?")
-	data.SetKey("go", "狗朗")
-	fmt.Println(data.GetKey("???"))
-	for i := 0; i < len(data.Arr); i++ {
-		data.Arr[i].Log()
-		fmt.Println("长度:", data.Arr[i].Length())
+	//data.NewHash()
+	//data.SetKey("1312", "dfad")
+	//data.SetKey("世界和平", "核平")
+	//data.SetKey("go", "宝可梦")
+	//data.SetKey("hahah", "哈哈哈")
+	//data.SetKey("???", 123213)
+	//data.SetKey("欸", "?")
+	//data.SetKey("go", "狗朗")
+	//fmt.Println(data.GetKey("???"))
+	//for i := 0; i < len(data.Arr); i++ {
+	//	data.Arr[i].Log()
+	//	fmt.Println("长度:", data.Arr[i].Length())
+	//}
+
+	key := []byte("sdfgqwer")
+	src := []byte("aes对称加密的第一个尝试,oMaoyu")
+	text, err := _7.AesCtrEncrypt(key, src)
+	if err != nil {
+		fmt.Println("err:", err)
+		return
 	}
+	text, _ = _7.AesCtrDecrypt(key, text)
+	fmt.Println(text)
 }
 
 func ddd(dict map[string]int) {
