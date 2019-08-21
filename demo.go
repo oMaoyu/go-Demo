@@ -99,15 +99,27 @@ func main() {
 	//	fmt.Println("长度:", data.Arr[i].Length())
 	//}
 
-	key := []byte("sdfgqwer12345678")
-	src := []byte("aes对称加密的第一个尝试,oMaoyu")
-	text, err := _7.AesCtrEncrypt(key, src)
+	//key := []byte("sdfgqwer12345678")
+	//src := []byte("aes对称加密的第一个尝试,oMaoyu")
+	//text, err := _7.AesCtrEncrypt(key, src)
+	//if err != nil {
+	//	fmt.Println("err:", err)
+	//	return
+	//}
+	//text, _ = _7.AesCtrDecrypt(key, text)
+	//fmt.Println(string(text))
+
+
+	key := []byte("sdfgqwer")
+	src := []byte("des对称加密的第一个尝试,oMaoyu")
+	text, err := _7.DesCBCEncrypt(key, src)
 	if err != nil {
 		fmt.Println("err:", err)
 		return
 	}
-	text, _ = _7.AesCtrDecrypt(key, text)
+	text, _ = _7.DesCBCDecrypt(key, text)
 	fmt.Println(string(text))
+
 }
 
 func ddd(dict map[string]int) {
