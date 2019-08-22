@@ -27,7 +27,7 @@ func GenerateKeyPair(bits int) error {
 		Bytes:   der,
 	}
 	//4. 对pem格式进行base64编码，最终得到私钥数据，写入文件
-	f1, _ := os.Create("./rsaSyKey.pem")
+	f1, _ := os.Create("./18/rsaSyKey.pem")
 	defer f1.Close()
 	err = pem.Encode(f1, &pemBlock)
 	if err != nil {
@@ -47,7 +47,7 @@ func GenerateKeyPair(bits int) error {
 		Bytes:   der,
 	}
 	//写入文件中
-	f2, _ := os.Create("./rsaGyKey.pem")
+	f2, _ := os.Create("./18/rsaGyKey.pem")
 	defer f2.Close()
 	err = pem.Encode(f2, &pemBlock)
 	if err != nil {
