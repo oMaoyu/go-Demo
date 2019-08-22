@@ -106,7 +106,6 @@ func main() {
 	//text, _ = _7.AesCtrDecrypt(key, text)
 	//fmt.Println(string(text))
 
-
 	//key := []byte("sdfgqwer")
 	//src := []byte("des对称加密的第一个尝试,oMaoyu")
 	//text, err := _7.DesCBCEncrypt(key, src)
@@ -117,9 +116,8 @@ func main() {
 	//text, _ = _7.DesCBCDecrypt(key, text)
 	//fmt.Println(string(text))
 	//_8.GenerateKeyPair(1024)
-	_8.RsaDemoRun()
-
-
+	//_8.RsaDemoRun()
+	_8.RsaSignatureDemo()
 }
 
 func ddd(dict map[string]int) {
