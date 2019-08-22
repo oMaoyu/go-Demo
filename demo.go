@@ -1,9 +1,6 @@
 package main
 
-import (
-	_7 "demo/17"
-	"fmt"
-)
+import _8 "demo/18"
 
 type Func func(int, int) int
 
@@ -110,16 +107,16 @@ func main() {
 	//fmt.Println(string(text))
 
 
-	key := []byte("sdfgqwer")
-	src := []byte("des对称加密的第一个尝试,oMaoyu")
-	text, err := _7.DesCBCEncrypt(key, src)
-	if err != nil {
-		fmt.Println("err:", err)
-		return
-	}
-	text, _ = _7.DesCBCDecrypt(key, text)
-	fmt.Println(string(text))
-
+	//key := []byte("sdfgqwer")
+	//src := []byte("des对称加密的第一个尝试,oMaoyu")
+	//text, err := _7.DesCBCEncrypt(key, src)
+	//if err != nil {
+	//	fmt.Println("err:", err)
+	//	return
+	//}
+	//text, _ = _7.DesCBCDecrypt(key, text)
+	//fmt.Println(string(text))
+	_8.GenerateKeyPair(1024)
 }
 
 func ddd(dict map[string]int) {
