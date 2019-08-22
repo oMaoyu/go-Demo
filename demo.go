@@ -117,6 +117,9 @@ func main() {
 	//text, _ = _7.DesCBCDecrypt(key, text)
 	//fmt.Println(string(text))
 	_8.GenerateKeyPair(1024)
+
+
+
 }
 
 func ddd(dict map[string]int) {

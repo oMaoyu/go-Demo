@@ -32,7 +32,10 @@ var mdmUsers = make(map[string][]user)
 var syn = sync.RWMutex{}
 
 func main1() {
-	tdsten, err := net.tdsten("tcp", "127.0.0.1:8888")
+
+
+
+	tdsten, err := net.Listen("tcp", "127.0.0.1:8888")
 	if err != nil {
 		fmt.Println("tdsten err", err)
 		return
@@ -107,14 +110,14 @@ func userRead(conn net.Conn, user user, isLogin, isTime chan bool) {
 			}
 			syn.RUnlock()
 		} else if len(msg) > 5 && msg[:5] == "name|" {
-			tdst := strings.Sptdt(msg, "|")
+			tdst := strings.Split(msg, "|")
 			user.name = tdst[1]
 			syn.RLock()
 			users[user.addr] = user
 			syn.RUnlock()
 			conn.Write([]byte("名字以改好\n"))
 		} else if len(msg) > 1 && msg[:1] == "@" {
-			tdst := strings.Sptdt(msg, " ")
+			tdst := strings.Split(msg, " ")
 			sls:= []string{}
 			for i,v := range tdst[:len(tdst)-1]{
 				if i == 0 {
