@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="280b3c55-2e0d-43cb-bab3-9a634e3017c7" name="默认更改列表" comment="默认更改列表">
+      <change afterPath="$PROJECT_DIR$/18/utilsKey.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/18/createKeyPair.go" beforeDir="false" afterPath="$PROJECT_DIR$/18/createKeyPair.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,47 +17,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/18/createKeyPair.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-98">
-              <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+            <state relative-caret-position="322">
+              <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
               <folding>
-                <element signature="e#12#43#0" expanded="true" />
+                <element signature="e#12#88#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/15/聊天.go">
+        <entry file="file://$PROJECT_DIR$/18/utilsKey.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-383">
-              <caret line="119" column="33" selection-start-line="119" selection-start-column="33" selection-end-line="119" selection-end-column="33" />
+            <state relative-caret-position="270">
+              <caret line="18" column="27" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="27" />
               <folding>
-                <element signature="e#13#69#0" expanded="true" />
+                <element signature="e#12#49#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo.go">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$USER_HOME$/学习/临时存放/08-密码学/day02/03-代码/01-密码/02-rsa/utils.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="121" selection-start-line="121" selection-end-line="121" />
+            <state relative-caret-position="285">
+              <caret line="25" column="51" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rsaGyKey.pem">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$USER_HOME$/学习/临时存放/08-密码学/day02/03-代码/01-密码/02-rsa/02-rsa-pubkeyencrypt.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rsaSyKey.pem">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$USER_HOME$/学习/临时存放/08-密码学/day02/03-代码/01-密码/02-rsa/03-rsa-私钥签名.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -141,9 +151,11 @@
         <option value="$PROJECT_DIR$/data/data1.go" />
         <option value="$PROJECT_DIR$/17/aes-ctr.go" />
         <option value="$PROJECT_DIR$/17/des-cbc.go" />
-        <option value="$PROJECT_DIR$/18/createKeyPair.go" />
         <option value="$PROJECT_DIR$/demo.go" />
         <option value="$PROJECT_DIR$/15/聊天.go" />
+        <option value="$PROJECT_DIR$/18/createKeyPair.go" />
+        <option value="$PROJECT_DIR$/18/utilsKey.go" />
+        <option value="$USER_HOME$/学习/临时存放/08-密码学/day02/03-代码/01-密码/02-rsa/utils.go" />
       </list>
     </option>
   </component>
@@ -311,7 +323,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50063694" side_tool="true" weight="0.3111588" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.64407814" weight="0.43850267" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -337,22 +349,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="默认更改列表" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/12/12.go" />
-    <entry file="file://$PROJECT_DIR$/src/demo.go" />
-    <entry file="file://$PROJECT_DIR$/11/11.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="97" column="47" selection-start-line="97" selection-start-column="42" selection-end-line="97" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/12/12.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/13/13.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -664,13 +660,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/学习/临时存放/08-密码学/day02/03-代码/01-密码/02-rsa/03-rsa-私钥签名.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/学习/临时存放/08-密码学/day02/03-代码/01-密码/02-rsa/02-rsa-pubkeyencrypt.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/18/createKeyPair.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-98">
-          <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+        <state relative-caret-position="322">
+          <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
           <folding>
-            <element signature="e#12#43#0" expanded="true" />
+            <element signature="e#12#88#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/18/utilsKey.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="27" />
+          <folding>
+            <element signature="e#12#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/学习/临时存放/08-密码学/day02/03-代码/01-密码/02-rsa/utils.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="25" column="51" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="51" />
         </state>
       </provider>
     </entry>

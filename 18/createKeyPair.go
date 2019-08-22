@@ -7,7 +7,7 @@ import (
 	"encoding/pem"
 	"os"
 )
-
+// 创建公私钥
 func GenerateKeyPair(bits int) error {
 
 	//1. 创建私钥 (rsa包)
