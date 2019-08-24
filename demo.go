@@ -1,6 +1,6 @@
 package main
 
-import _8 "demo/18"
+import _9 "demo/19"
 
 type Func func(int, int) int
 
@@ -117,7 +117,8 @@ func main() {
 	//fmt.Println(string(text))
 	//_8.GenerateKeyPair(1024)
 	//_8.RsaDemoRun()
-	_8.RsaSignatureDemo()
+	//_8.RsaSignatureDemo()
+	_9.BlockChainDemoRun()
 }
 
 func ddd(dict map[string]int) {
