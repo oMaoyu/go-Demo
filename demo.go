@@ -1,6 +1,8 @@
 package main
 
-import _9 "demo/19"
+import (
+	_9 "demo/19"
+)
 
 type Func func(int, int) int
 
