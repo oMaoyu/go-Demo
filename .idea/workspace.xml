@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="280b3c55-2e0d-43cb-bab3-9a634e3017c7" name="默认更改列表" comment="默认更改列表">
-      <change afterPath="$PROJECT_DIR$/21/block.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/21/blockChain.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/21/proof.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/21/utils.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/21/使用数据库存储来简单的进行持久化的挖矿区块链.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21/cli.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.go" beforeDir="false" afterPath="$PROJECT_DIR$/demo.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/21/blockchain.db" beforeDir="false" afterPath="$PROJECT_DIR$/21/blockchain.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/21/使用数据库存储来简单的进行持久化的挖矿区块链.go" beforeDir="false" afterPath="$PROJECT_DIR$/21/使用数据库存储来简单的进行持久化的挖矿区块链.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,11 +18,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/21/blockChain.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="99" column="16" selection-start-line="99" selection-start-column="16" selection-end-line="99" selection-end-column="16" />
+            <state relative-caret-position="-728">
+              <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/21/cli.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="367">
+              <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+              <folding>
+                <element signature="e#12#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$USER_HOME$/学习/临时存放/09-区块链/day02/03-代码/02-BTC/v3-b-命令行cli/cli.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="353">
+              <caret line="28" column="10" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -42,8 +60,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/21/使用数据库存储来简单的进行持久化的挖矿区块链.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+            <state relative-caret-position="120">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -87,8 +105,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/10/10.go" />
-        <option value="$PROJECT_DIR$/src/11/11.go" />
         <option value="$PROJECT_DIR$/src/12/12.go" />
         <option value="$PROJECT_DIR$/src/demo1.go" />
         <option value="$PROJECT_DIR$/src/13/13.go" />
@@ -134,10 +150,12 @@
         <option value="$PROJECT_DIR$/21/水电费.go" />
         <option value="$PROJECT_DIR$/21/proof.go" />
         <option value="$PROJECT_DIR$/21/utils.go" />
-        <option value="$PROJECT_DIR$/21/使用数据库存储来简单的进行持久化的挖矿区块链.go" />
         <option value="$PROJECT_DIR$/demo.go" />
         <option value="$PROJECT_DIR$/21/block.go" />
         <option value="$PROJECT_DIR$/21/blockChain.go" />
+        <option value="$PROJECT_DIR$/21/cil.go" />
+        <option value="$PROJECT_DIR$/21/使用数据库存储来简单的进行持久化的挖矿区块链.go" />
+        <option value="$PROJECT_DIR$/21/cli.go" />
       </list>
     </option>
   </component>
@@ -298,13 +316,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1769" height="1027" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49936306" visible="true" weight="0.15749855" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50063694" side_tool="true" weight="0.3111588" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.64407814" visible="true" weight="0.43850267" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.64407814" weight="0.47272727" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -312,7 +331,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.5836711" weight="0.32941177" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32941177" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.4163289" side_tool="true" weight="0.32941177" />
       <window_info anchor="bottom" id="调试" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -329,34 +348,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="默认更改列表" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/rsaGyKey.pem" />
-    <entry file="file://$PROJECT_DIR$/15/聊天.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-383">
-          <caret line="119" column="33" selection-start-line="119" selection-start-column="33" selection-end-line="119" selection-end-column="33" />
-          <folding>
-            <element signature="e#13#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/学习/临时存放/08-密码学/day02/03-代码/01-密码/02-rsa/utils.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/18/createKeyPair.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
-          <folding>
-            <element signature="e#12#88#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/学习/临时存放/08-密码学/day02/03-代码/01-密码/02-rsa/02-rsa-pubkeyencrypt.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -624,13 +615,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/21/使用数据库存储来简单的进行持久化的挖矿区块链.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/21/block.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
@@ -647,8 +631,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/21/blockChain.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="99" column="16" selection-start-line="99" selection-start-column="16" selection-end-line="99" selection-end-column="16" />
+        <state relative-caret-position="-728">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/学习/临时存放/09-区块链/day02/03-代码/02-BTC/v3-b-命令行cli/run.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/学习/临时存放/09-区块链/day02/03-代码/02-BTC/v3-b-命令行cli/main.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/21/使用数据库存储来简单的进行持久化的挖矿区块链.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/21/cli.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+          <folding>
+            <element signature="e#12#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/学习/临时存放/09-区块链/day02/03-代码/02-BTC/v3-b-命令行cli/cli.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="28" column="10" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="6" />
         </state>
       </provider>
     </entry>
