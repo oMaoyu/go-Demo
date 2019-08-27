@@ -13,7 +13,7 @@ type CLI struct {
 const Usage = `
 	./oMaoyu add <需要添加的数据>  ==>添加区块
 	./oMaoyu log    ==>打印区块链
-	./oMaoyu 
+	./oMaoyu utxo  <需要添加的数据>  ==> 矿工名
 `
 
 func (cli *CLI) run() {
@@ -35,6 +35,13 @@ func (cli *CLI) run() {
 		cli.Add(arr[2])
 	case "log":
 		cli.Log()
+	case "utxo":
+		if len(arr) <3 {
+			fmt.Println("输入参数无效，请检查！")
+			fmt.Println(Usage)
+			return
+		}
+		cli.Utxo(arr[2])
 	default:
 		fmt.Println("输入参数无效，请检查！")
 		fmt.Println(Usage)
@@ -46,4 +53,7 @@ func (cli *CLI) Log() {
 
 func (cli *CLI) Add(data string) {
 	//cli.bc.add(data)
+}
+func (cli *CLI) Utxo(data string) {
+	cli.bc.FindMyUtxo(data)
 }
