@@ -17,7 +17,7 @@ const Usage = `
 
 func (cli *CLI) run() {
 	arr := os.Args
-	if len(arr) < 2    {
+	if len(arr) < 2 {
 		fmt.Println("输入参数无效，请检查！")
 		fmt.Println(Usage)
 		return
