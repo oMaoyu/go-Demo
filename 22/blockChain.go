@@ -63,23 +63,23 @@ func NewBlockChain() *BlockChain {
 	return &BlockChain{db: db, tail: lastHash}
 }
 
-//func (b *BlockChain) add(data string) {
-//
-//	newBlock := newBlcok(data, b.tail)
-//	err := b.db.Update(func(tx *bolt.Tx) error {
-//		bucket := tx.Bucket([]byte(blockcbucket))
-//		if bucket == nil {
-//			panic("数据库为空,无法添加")
-//		}
-//		bucket.Put(newBlock.Hash, newBlock.ToByte())
-//		bucket.Put([]byte(lastBLockHashKey), newBlock.Hash)
-//		b.tail = newBlock.Hash
-//		return nil
-//	})
-//	if err != nil {
-//		panic(err)
-//	}
-//}
+func (b *BlockChain) add(txs []*Transaction) {
+
+	newBlock := newBlcok(txs, b.tail)
+	err := b.db.Update(func(tx *bolt.Tx) error {
+		bucket := tx.Bucket([]byte(blockcbucket))
+		if bucket == nil {
+			panic("数据库为空,无法添加")
+		}
+		bucket.Put(newBlock.Hash, newBlock.ToByte())
+		bucket.Put([]byte(lastBLockHashKey), newBlock.Hash)
+		b.tail = newBlock.Hash
+		return nil
+	})
+	if err != nil {
+		panic(err)
+	}
+}
 func (bc *BlockChain) Log() {
 	prev := bc.tail
 	for prev != nil {
@@ -88,12 +88,19 @@ func (bc *BlockChain) Log() {
 		prev = block.PrevHash
 	}
 }
+
+type OutputInfo struct {
+	Out Output
+	Id []byte
+	Index int32
+}
+
 // 遍历账本 找到某个地址的所有utxo
-func  (bc *BlockChain) FindMyUtxo(add string)[]Output{
-	var out []Output
+func  (bc *BlockChain) FindMyUtxo(add string)[]OutputInfo{
+	var out []OutputInfo
 	//定义一个map，用于存储已经消耗过的output，在遍历inputs是动态更新
 	//key ==> 交易id
-	//value ==> 这个id里面的output的索引的集合
+	//value ==> 1
 	tmpOut := make(map[string][]int32)
 	// 开始遍历block
 	prev := bc.tail
@@ -121,7 +128,7 @@ func  (bc *BlockChain) FindMyUtxo(add string)[]Output{
 					}
 					fmt.Printf("找到了属于'%s'的output: %d\n", add, index)
 					fmt.Println(output.Value)
-					out = append(out, output)
+					out = append(out, OutputInfo{output,tx.Id,int32(index)})
 				}
 			}
 			// 遍历输入  表示出和自己相关的输出  就是已经使用过的
@@ -134,6 +141,27 @@ func  (bc *BlockChain) FindMyUtxo(add string)[]Output{
 		}
 	}
 	return out
+}
+
+// 根据账本去寻找满足条件的输出,拼接成字典返回
+func (bc *BlockChain) findNeedUtxoinfos(from string, amount float32) (map[string][]int32, float32) {
+	// 初始化返回值
+	tmpMap := make(map[string][]int32)
+	var tmpValue float32
+	//首先遍历该地址的所有历史交易  找到能用的数据
+	utxoInfos := bc.FindMyUtxo(from)
+
+	// 选择满足条件的数据进行返回
+	for _,info := range utxoInfos{
+		tmpValue += info.Out.Value
+		key := string(info.Id)
+		tmpMap[key] = append(tmpMap[key],info.Index)
+		// 如果现有金额满足消费金额  不继续遍历 直接返回
+		if tmpValue > amount{
+			 break
+		}
+	}
+	return tmpMap,tmpValue
 }
 
 
