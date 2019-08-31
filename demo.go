@@ -1,7 +1,7 @@
 package main
 
 import (
-	_3 "demo/23"
+	_4 "demo/24"
 )
 
 type Func func(int, int) int
@@ -122,8 +122,8 @@ func main() {
 	//_8.RsaSignatureDemo()
 
 	//_1.BlockChainDemoRun()
-	_3.Demo()
-
+	//_3.Demo()
+	_4.DemoRun()
 }
 
 func ddd(dict map[string]int) {
