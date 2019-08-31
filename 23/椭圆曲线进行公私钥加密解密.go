@@ -36,7 +36,7 @@ func Demo() {
 	rInt.SetBytes(data1[:len(data1)/2])
 	sInt.SetBytes(data1[len(data1)/2:])
 	//传输时，内容被篡改
-	data = append(data, []byte("demo")...)
+	//data = append(data, []byte("demo")...)
 	hash = sha256.Sum256(data)
 	//3. 公钥验证
 	isVerify := ecdsa.Verify(&pukey, hash[:], &rInt, &sInt)

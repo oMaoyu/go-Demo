@@ -16,6 +16,7 @@ const Usage = `
 	./oMaoyu log    ==>打印区块链
 	./oMaoyu utxo  <需要添加的数据>  ==> 矿工名
 	./oMaoyu send <FROM> <TO> <AMOUNT> <MINER> <DATA>  转账人  被转账人  转账金额  挖矿人 挖矿信息
+	./oMaoyu wallet ===> 创建钱包
 `
 
 func (cli *CLI) run() {
@@ -58,6 +59,8 @@ func (cli *CLI) run() {
 		miner := arr[5]
 		data := arr[6]
 		cli.Send(from, to, float32(amount), miner, data)
+	case "wallet":
+		cli.CreateWallet()
 	default:
 		fmt.Println("输入参数无效，请检查！")
 		fmt.Println(Usage)
@@ -85,4 +88,14 @@ func (cli *CLI) Send(from, to string, amount float32, miner string, data string)
 		txs = append(txs, tx)
 	}
 	cli.bc.add(txs)
+}
+
+func (cil *CLI)CreateWallet(){
+	wm:= newWalletManager()
+	add,err := wm.createWallet()
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	fmt.Println(add)
 }
