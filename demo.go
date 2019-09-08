@@ -1,7 +1,7 @@
 package main
 
 import (
-	_4 "demo/24"
+	likou "demo/力扣刷题"
 )
 
 type Func func(int, int) int
@@ -123,7 +123,8 @@ func main() {
 
 	//_1.BlockChainDemoRun()
 	//_3.Demo()
-	_4.DemoRun()
+	//_4.DemoRun()
+	likou.Run()
 }
 
 func ddd(dict map[string]int) {
