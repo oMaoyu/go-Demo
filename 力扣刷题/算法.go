@@ -10,6 +10,28 @@ func Run() {
 	//fmt.Println(numJewelsInStones("aD","gacDDADkew"))
 	//fmt.Println(defangIPaddr("172.0.0.1"))
 	//fmt.Println(removeOuterParentheses("(()())(())"))
+
+	node := &ListNode{
+		Val:  2,
+		Next: &ListNode{
+			Val:  4,
+			Next: &ListNode{
+				Val:  3,
+				Next: nil,
+			},
+		},
+	}
+	node2 := &ListNode{
+		Val:  5,
+		Next: &ListNode{
+			Val:  6,
+			Next: &ListNode{
+				Val:  4,
+				Next: nil,
+			},
+		},
+	}
+	addTwoNumbers(node,node2).Log()
 }
 
 func twoSum(numbers []int, target int) []int {
@@ -107,5 +129,18 @@ func toLowerCase(str string) string {
 }
 //617 合并二叉树
 func mergeTrees(t1 *TreeNode, t2 *TreeNode) *TreeNode {
+	// 如果t1 为空返回t2
+	if t1 == nil {
+		return t2
+	}
+	if t2 == nil {
+		return t1
+	}
 
+	t1.Val += t2.Val
+	t1.Left = mergeTrees(t1.Left,t2.Left)
+	t1.Right = mergeTrees(t1.Right,t2.Right)
+
+
+	return t1
 }
