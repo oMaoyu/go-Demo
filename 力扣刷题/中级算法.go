@@ -71,7 +71,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 //}
 
 // 3 无重复字符串子串
-// 以解决
+// 以解决   过段时间在写一遍  TODO
 func lengthOfLongestSubstring(s string) int {
 	// 思路 :  使用字典记录每个字符的位置, 如果出现重复则获取重复之间的长度  后续出现新的长度则判断长度  长度大于已有长度替换
 	Len, index := 0, 0
@@ -85,13 +85,10 @@ func lengthOfLongestSubstring(s string) int {
 		if i-index+1 > Len {
 			Len = i - index + 1
 		}
-
-		dict[s[i]] = i+1
-
+		dict[s[i]] = i + 1
 	}
 	return Len
 }
-
 
 //根据评论后学习所写  qweqwerq
 //func lengthOfLongestSubstring(s string) int {
@@ -134,3 +131,35 @@ func lengthOfLongestSubstring(s string) int {
 //	return max
 //}
 //qweqwerq
+
+// 5 最长回文子串  目前只获取相同数  修改中
+func longestPalindrome(s string) string {
+	// 思路   使用下标进行统计  用map 存储对应字符串下标  发现相同后直接存储其长度 后续在判断  如果通过则替换现有的
+	index, num, max,temIndex,temMax := 0, 0, 0,0,0
+	dict := make(map[uint8]int)
+	for i := 0; i < len(s); i++ {
+		if dict[s[i]] > 0{
+			index = dict[s[i]]
+			num = i - dict[s[i]]
+		}
+		dict[s[i]] = i + 1
+		max = index + num + 1
+		if reverse(s[temIndex:temMax]) == s[temIndex:temMax]{
+			max = temMax
+			index = temIndex
+		}
+	}
+	if index > 0 {
+		index = index - 1
+	}
+ 	return s[index:max]
+}
+func reverse(str string) string {
+	var result string
+	strLen := len(str)
+	for i := 0; i < strLen; i++ {
+		result = result + fmt.Sprintf("%c", str[strLen-i-1])
+	}
+	return result
+}
+//"babad"
