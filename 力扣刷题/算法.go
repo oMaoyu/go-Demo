@@ -11,27 +11,28 @@ func Run() {
 	//fmt.Println(defangIPaddr("172.0.0.1"))
 	//fmt.Println(removeOuterParentheses("(()())(())"))
 
-	node := &ListNode{
-		Val:  2,
-		Next: &ListNode{
-			Val:  4,
-			Next: &ListNode{
-				Val:  3,
-				Next: nil,
-			},
-		},
-	}
-	node2 := &ListNode{
-		Val:  5,
-		Next: &ListNode{
-			Val:  6,
-			Next: &ListNode{
-				Val:  4,
-				Next: nil,
-			},
-		},
-	}
-	addTwoNumbers(node,node2).Log()
+	//node := &ListNode{
+	//	Val:  2,
+	//	Next: &ListNode{
+	//		Val:  4,
+	//		Next: &ListNode{
+	//			Val:  3,
+	//			Next: nil,
+	//		},
+	//	},
+	//}
+	//node2 := &ListNode{
+	//	Val:  5,
+	//	Next: &ListNode{
+	//		Val:  6,
+	//		Next: &ListNode{
+	//			Val:  4,
+	//			Next: nil,
+	//		},
+	//	},
+	//}
+	//addTwoNumbers(node,node2).Log()
+	fmt.Println(lengthOfLongestSubstring("aaa"))
 }
 
 func twoSum(numbers []int, target int) []int {
