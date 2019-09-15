@@ -1,8 +1,6 @@
 package main
 
-import (
-	likou "demo/力扣刷题"
-)
+import logger "demo/log"
 
 type Func func(int, int) int
 
@@ -124,7 +122,9 @@ func main() {
 	//_1.BlockChainDemoRun()
 	//_3.Demo()
 	//_4.DemoRun()
-	likou.Run()
+	//likou.Run()
+
+	logger.Warnf("这是一个根据zap日志框架的警告日志")
 }
 
 func ddd(dict map[string]int) {

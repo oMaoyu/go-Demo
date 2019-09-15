@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="280b3c55-2e0d-43cb-bab3-9a634e3017c7" name="默认更改列表" comment="默认更改列表">
+      <change afterPath="$PROJECT_DIR$/log/log.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pachong/text.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/力扣刷题/中级算法.go" beforeDir="false" afterPath="$PROJECT_DIR$/力扣刷题/中级算法.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/力扣刷题/算法.go" beforeDir="false" afterPath="$PROJECT_DIR$/力扣刷题/算法.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo.go" beforeDir="false" afterPath="$PROJECT_DIR$/demo.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
